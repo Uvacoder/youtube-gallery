@@ -29,15 +29,7 @@ export default function Home({ results }) {
             results.map((video) => {
               return (
                 <Box key={video.id} mx={4}>
-                  <Heading
-                    as="h5"
-                    fontSize="md"
-                    textAlign="center"
-                    noOfLines={1}
-                    mb={2}
-                  >
-                    {video.snippet.title}
-                  </Heading>
+                  
                   <Image
                     src={video.snippet.thumbnails.maxres.url}
                     layout="intrinsic"
@@ -45,6 +37,15 @@ export default function Home({ results }) {
                     height={720}
                     alt={video.snippet.title}
                   />
+                  <Heading
+                    as="h5"
+                    fontSize="sm"
+                    textAlign="left"
+                    noOfLines={1}
+                    mb={2}
+                  >
+                    {video.snippet.title}
+                  </Heading>
                   <Center>
                   <Button mx="auto" my={4} colorScheme="red" onClick={() => {setCurrentVideo(video); setPlaying(true); scrollTop();}}>Watch Now</Button>
                   </Center>
