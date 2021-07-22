@@ -31,7 +31,7 @@ export default function Home({ results }) {
                 <Box key={video.id} mx={4}>
                   
                   <Image
-                    src={video.snippet.thumbnails.maxres.url}
+                    src={video.snippet.thumbnails.maxres?.url ||  "https://via.placeholder.com/300"}
                     layout="intrinsic"
                     width={1280}
                     height={720}
